@@ -1,0 +1,92 @@
+{
+    "common": {
+        "name": "vesync",
+        "version": "0.0.1",
+        "news": {
+            "0.0.1": {
+                "en": "initial release",
+                "de": "Erstveröffentlichung",
+                "ru": "Начальная версия",
+                "pt": "lançamento inicial",
+                "nl": "Eerste uitgave",
+                "fr": "Première version",
+                "it": "Versione iniziale",
+                "es": "Versión inicial",
+                "pl": "Pierwsze wydanie",
+                "zh-cn": "首次出版"
+            }
+        },
+        "titleLang": {
+            "en": "VeSync",
+            "de": "VeSync",
+            "ru": "VeSync",
+            "pt": "VeSync",
+            "nl": "VeSync",
+            "fr": "VeSync",
+            "it": "VeSync",
+            "es": "VeSync",
+            "pl": "VeSync",
+            "zh-cn": "VeSync"
+        },
+        "desc": {
+            "en": "Adapter für VeSync-Geräte",
+            "de": "Adapter für VeSync-Geräte",
+            "ru": "Адаптер для VeSync-Geräte",
+            "pt": "Adaptador para VeSync-Geräte",
+            "nl": "Adapter voor VeSync-Geräte",
+            "fr": "Adaptateur pour VeSync-Geräte",
+            "it": "Adattatore per VeSync-Geräte",
+            "es": "Adaptador para VeSync-Geräte",
+            "pl": "Adapter für VeSync-Geräte",
+            "zh-cn": "VeSync-Geräte适配器"
+        },
+        "authors": ["HeadCrash78 <rene_schumacher@outlook.com>"],
+        "keywords": ["VeSync", "Etekcity", "Cosori", "Levoit"],
+        "license": "MIT",
+        "platform": "Javascript/Node.js",
+        "icon": "vesync.png",
+        "enabled": true,
+        "extIcon": "https://raw.githubusercontent.com/HeadCrash78/ioBroker.vesync/master/admin/vesync.png",
+        "readme": "https://github.com/HeadCrash78/ioBroker.vesync/blob/master/README.md",
+        "loglevel": "info",
+        "mode": "daemon",
+        "type": "climate-control",
+        "compact": true,
+        "connectionType": "cloud",
+        "dataSource": "poll",
+        "materialize": true,
+        "dependencies": [
+            {
+                "js-controller": ">=2.0.0"
+            }
+        ]
+    },
+    "native": {
+        "option1": true,
+        "option2": "42"
+    },
+    "objects": [],
+    "instanceObjects": [
+        {
+            "_id": "info",
+            "type": "channel",
+            "common": {
+                "name": "Information"
+            },
+            "native": {}
+        },
+        {
+            "_id": "info.connection",
+            "type": "state",
+            "common": {
+                "role": "indicator.connected",
+                "name": "Device or service connected",
+                "type": "boolean",
+                "read": true,
+                "write": false,
+                "def": false
+            },
+            "native": {}
+        }
+    ]
+}
